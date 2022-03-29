@@ -1,41 +1,20 @@
-//Conectar a seta a uma imagem
-// Consegui acessar uma imagem
+//Conectar a seta a uma imagem ok
+// Consegui acessar uma imagem ok
+//Fazer uma seta ficar tranparente enquanto usar a outra.
 
 const listaImagens = document.querySelectorAll('.imagens')
 console.log(listaImagens)
-// procurar o array de setas
-//Buscar todas a imagens com a classe imagens
 const setaVoltar = document.getElementById('seta-voltar')
 const setaAvancar = document.getElementById('seta-avancar')
 let imagemAtual = 0 
-//comeca pela imagem de posição zero(primeira)
-//
-//
-//
-
 const btnseta = document.querySelector('#seta-avancar')
 const btnVoltar = document.querySelector ('#seta-voltar')
+const listaSetas = document.querySelectorAll('.setas')
+console.log (listaSetas)
 
-btnseta.addEventListener('click', function(){
-
-    if(btnVoltar.style.display === 'none') {
-        btnVoltar.style.display = 'block'
-    }else{
-        btnVoltar.style.display = 'block'
-    }
-    console.log('Botao seta')
-})
-//
-//
-//
-//
 //colocar o codigo de mostrar e pagar seta aqui
-//
-//
-//
-//
-//
-//
+
+
 function esconderImagens () {
     listaImagens.forEach(imagem =>{
         imagem.classList.remove('mostrar')
@@ -43,6 +22,7 @@ function esconderImagens () {
     })
     console.log('01-f esconder')
 }
+
 
 function mostrarImagens () {
     listaImagens[imagemAtual].classList.add ('mostrar')
@@ -71,6 +51,8 @@ setaVoltar.addEventListener('click', function(){
     esconderImagens()
     mostrarImagens()
 })
+
+
 
 //Desaparecer com a seta quando for a primeira imagem
 //quando chegar na ultima imagem a o seta da direta sumir
