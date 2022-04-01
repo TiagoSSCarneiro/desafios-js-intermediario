@@ -1,58 +1,37 @@
-//Conectar a seta a uma imagem ok
-// Consegui acessar uma imagem ok
-//Fazer uma seta ficar tranparente enquanto usar a outra.
 
-const listaImagens = document.querySelectorAll('.imagens')
-console.log(listaImagens)
-const setaVoltar = document.getElementById('seta-voltar')
-const setaAvancar = document.getElementById('seta-avancar')
-let imagemAtual = 0 
-const btnseta = document.querySelector('#seta-avancar')
-const btnVoltar = document.querySelector ('#seta-voltar')
-const listaSetas = document.querySelectorAll('.setas')
-console.log (listaSetas)
+const listaImagens = document.querySelectorAll('.imagens')//Ok! Esta muscando todas as imagens
+const setaVoltar = document.getElementById('seta-voltar')//ok! Buscando pelo ID da primeira seta
+const setaAvancar = document.getElementById('seta-avancar')//Ok! Buscando ID da segunda seta
+let imagemAtual = 0 //Varivel de inicialização
+const listaSetas = document.querySelectorAll('.setas')//as duas setas
+const setaInativa = document.querySelector('.seta-inativa')
 
-//colocar o codigo de mostrar e pagar seta aqui
-
-
-function esconderImagens () {
-    listaImagens.forEach(imagem =>{
+function esconderImagens() {
+    listaImagens.forEach(imagem => {
         imagem.classList.remove('mostrar')
-        
     })
-    console.log('01-f esconder')
 }
 
-
-function mostrarImagens () {
-    listaImagens[imagemAtual].classList.add ('mostrar')
-    console.log ('02-f mostrar')
+function mostrarImagens() {
+    listaImagens[imagemAtual].classList.add('mostrar')
+      
+    imagemAtual == 0 ? setaVoltar.style.opacity = '20%': setaVoltar.style.opacity = '100%'
+        
+    listaImagens.length -1 == imagemAtual ? setaAvancar.style.opacity = '20%' : setaAvancar.style.opacity = '100%'  
 }
 
-setaAvancar.addEventListener('click', function(){
-    const totalDeImagens = listaImagens.length -1
-    if (imagemAtual === totalDeImagens) {
-        return
-    }
-    imagemAtual++
-    console.log('03-Avc-escondeImg')
-    console.log('04-Avc-mostraImg')
+setaAvancar.addEventListener('click', function () {
+  
+    if (imagemAtual == listaImagens.length -1) return
+    imagemAtual++//conta mais uma
     esconderImagens()
     mostrarImagens()
 })
 
-setaVoltar.addEventListener('click', function(){
-    if(imagemAtual === 0) {
-        return
-    }
+setaVoltar.addEventListener('click', function () {
+    
+    if (imagemAtual == 0) return
     imagemAtual--
-    console.log('05-Vol-escondImg')
-    console.log('06- Vol-mostraImg')
     esconderImagens()
     mostrarImagens()
 })
-
-
-
-//Desaparecer com a seta quando for a primeira imagem
-//quando chegar na ultima imagem a o seta da direta sumir
