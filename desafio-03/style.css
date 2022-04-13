@@ -1,0 +1,131 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.container-formulario {
+    background: url(desafio3/bg-repeat.jpg);
+    min-height: 402px;
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+}
+
+.texto-conteudo {
+    color: white;
+    width: 405px;
+    padding: 0 80px 0 30px;   
+}
+
+.texto-conteudo h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.texto-conteudo p {
+    font-size: 15px;
+}
+
+form input, textarea {
+    outline: unset;
+    border-radius: 3px;
+    border: 1px solid rgb(128, 128, 128);
+    width: 298px;  
+    font-size: 15px;
+}
+.formulario {
+    margin-right: 20px;
+    width: 340px;
+    height: 378px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+   justify-content: space-between;  
+}
+
+.formulario .campos {
+    display: flex;
+    flex-direction: column;   
+}
+
+.formulario .campos input:first-child {
+    margin-top: 0;
+}
+
+
+.avisos {
+    color: red;
+    font-size: 8px;
+    display: none;
+}
+.mostrar {
+    display: block;
+}
+
+
+.formulario .campos input {
+    height: 35px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.formulario .campos input:hover {
+    border: 2px solid rgb(88, 88, 88);
+}
+
+.formulario textarea {
+    height: 100px;
+    padding: 10px;
+    font-size: 15px;
+    resize: none;
+    margin-top: 10px;
+    transition: 0.2s step-end;
+    font-family: 'Roboto';
+}
+
+.formulario textarea:hover {
+    border: 2px solid rgb(88, 88, 88);
+}
+
+.formulario .aviso {
+    color: rgb(88, 88, 88);
+    margin-right: 56%;
+    font-size: 13px;
+    
+}
+
+.botao .btn-submit {
+    margin-top: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    border: none;
+    background-color: rgba(60, 204, 135, 1);
+    height: 42px;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+}
+
+.botao .btn-submit:hover{
+    background-color: white;
+    border: 1px solid rgb(170, 170, 170);
+    color: rgba(60, 204, 135, 1);
+}
+
+.valido {
+    border: 1px solid green;
+}
+
+.invalido {
+    border: 1px solid rgb(243, 83, 83) !important;
+}
+
+
+
+
+
+

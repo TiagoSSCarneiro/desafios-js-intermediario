@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="restet.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário de dúvidas</title>
+</head>
+
+<body>
+    <main class="container">
+
+    
+    <div class="container-formulario">
+        <div class="texto-conteudo">
+            <div class="conteudo">
+                <h1>FICOU COM DÚVIDA? <br> NOS MANDE UMA MENSAGEM!</h1>
+                <p>caso tenha ficado com qualquer dúvida basta nos mandar uma mensagem e entraremos em contato em menos
+                    de
+                    24h.</p>
+            </div>
+        </div>
+        <form id="formulario" class="formulario" action="">
+            <div class="campos">
+                <input type="text" name="nome" id="nome" placeholder="Nome completo*">
+                <span class="avisos">campo obrigatório</span>
+
+                <input type="text" name="email" id="email" placeholder="Email*">
+                <span class="avisos">campo obrigatório</span>
+
+                <input type="text" name="telefone" id="telefone" placeholder="Ex: (99)99999-9999">
+                <span class="avisos">campo obrigatório</span>
+
+                <textarea class="mensagem " placeholder="Mensagem*" id="mensagem"></textarea>
+                <span class="avisos">campo obrigatório</span>
+
+            </div>
+            <div class="aviso">
+                <p>*campos obrigatórios</p>
+            </div>
+
+            <div class="botao">
+                <input id="botao" class="btn-submit" type="submit" value="Enviar">
+            </div>
+
+        </form>
+    </div>
+</main>
+    <script src="index.js"></script>
+</body>
+
+</html>
